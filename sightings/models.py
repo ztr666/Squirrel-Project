@@ -66,7 +66,7 @@ class Squirrel(models.Model):
     Primary_Fur_Color = models.CharField(
         max_length=100,
         blank=True,
-        choices=FUR_CHOICEA,
+        choices=FUR_CHOICES,
     )
     
     GROUND = 'Ground Plane'
@@ -109,6 +109,7 @@ class Squirrel(models.Model):
     )
     
     Other_Activities = models.CharField(
+        max_length=100,
         blank=True,
     )
     
