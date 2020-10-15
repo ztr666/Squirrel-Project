@@ -16,7 +16,7 @@ class Squirrel(models.Model):
     Unique_Squirrel_ID = models.CharField(
         max_length=100,
         help_text=_('Identification tag for each squirrel sightings'),
-        unique=True,
+        primary_key=True,
         blank=False,
     )
     
@@ -34,7 +34,7 @@ class Squirrel(models.Model):
         choices=SHIFT_CHOICES,
     )
 
-    Date = models.CharField(
+    Date = models.DateField(
         max_length=100,
         blank=False,
     )
@@ -49,7 +49,7 @@ class Squirrel(models.Model):
 
     Age = models.CharField(
         max_length=100,
-        blank=False,
+        blank=True,
         choices=AGE_CHOICES,
     )
 
