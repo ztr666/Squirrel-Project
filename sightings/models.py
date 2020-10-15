@@ -34,7 +34,7 @@ class Squirrel(models.Model):
         choices=SHIFT_CHOICES,
     )
 
-    Date = models.DateField(
+    Date = models.CharField(
         max_length=100,
         blank=False,
     )
