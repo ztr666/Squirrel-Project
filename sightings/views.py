@@ -16,20 +16,19 @@ def list_squirrels(request):
     return render(request, 'sightings/list_squirrel.html', context)
 
 def detail(request, squirrel_id):
-    squirrels = get_object_or_404(Squirrel, Unique_Squirrel_ID=squirrel_id)
+    squirrels = Squirrel.objects.get(Unique_Squirrel_ID=squirrel_id)
     context = {
             'squirrels': squirrels,
     }
     return render(request, 'sightings/detail.html', context)
 
 def edit_squirrels(request, squirrel_id):
-    squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=squirrel_id)
+    squirrel = Squirrel.objects.get(Unique_Squirrel_ID=squirrel_id)
     if request.method=='POST':
         form = SquirrelForm(request.POST, instance=squirrel)
         if form.is_valid():
             form.save()
-            #return HttpResponseRedirect(request.POST.get('next', '/'))
-            #return render(request,'/sighting/', {'squirrel':squirrel})
+            return redirect(f'/sightings')
     else:
         form = SquirrelForm(instance=squirrel)
     return render(request, 'sightings/edit_squirrels.html', {'form': form})
@@ -39,8 +38,7 @@ def add_squirrels(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            #return HttpResponseRedirect(request.POST.get('next', '/'))
-            #return render(request,'/sighting/', {'squirrel':squirrel})
+            return redirect(f'/sightings/')
     else:
         form = SquirrelForm()
     return render(request, 'sightings/add_squirrel.html', {'form': form})

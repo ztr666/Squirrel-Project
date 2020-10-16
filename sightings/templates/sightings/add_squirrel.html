@@ -11,11 +11,12 @@ sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossor
     <title>Add a Squirrel</title>
   </head>
   <body>
-    <form action="" method="post">{% csrf_token %}
-      <table align="center">{{ form }}</table>
-      <br>
+    <form  method="post">{% csrf_token %}
+      <table align="center">{{ form.as_p }}</table>
+	      <br>
       <center>
-        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button type="submit">Submit form</button>
       </center>
+    </form>
   </body>
 </html>

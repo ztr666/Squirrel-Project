@@ -6,7 +6,7 @@ from sightings.models import Squirrel
 class Command(BaseCommand):
     help = 'Import squirrel data'
     def add_arguments(self, parser):
-        parser.add_argument('path', help='/path/to/file.csv')
+        parser.add_argument('path', help='rows.csv')
     def handle(self, *args, **options):
         file_ = options['path']
         with open(file_) as fp:
@@ -16,7 +16,7 @@ class Command(BaseCommand):
                 obj = Squirrel()
                 obj.Longitude = item['X']
                 obj.Latitude = item['Y']
-                obj.Unique_Squirrel_Id = item['Unique Squirrel ID']
+                obj.Unique_Squirrel_ID = item['Unique Squirrel ID']
                 obj.Shift = item['Shift']
                 obj.Date = datetime.datetime.strptime(item['Date'],'%m%d%Y')
                 obj.Age = item['Age']
