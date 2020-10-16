@@ -15,6 +15,13 @@ def list_squirrels(request):
 
     return render(request, 'sightings/list_squirrel.html', context)
 
+def detail(request, squirrel_id):
+    squirrels = get_object_or_404(Squirrel, Unique_Squirrel_ID=squirrel_id)
+    context = {
+            'squirrels': squirrels,
+    }
+    return render(request, 'sightings/detail.html', context)
+
 def edit_squirrels(request, squirrel_id):
     squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=squirrel_id)
     if request.method=='POST':

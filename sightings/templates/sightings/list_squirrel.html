@@ -15,59 +15,18 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Latitude</th>
-	  <th>Longitude</th>
 	  <th>Unique_Squirrel_ID</th>
-	  <th>Shift</th>
 	  <th>Date</th>
-	  <th>Age</th>
-	  <th>Primary_Fur_Color</th>
-	  <th>Location</th>
-	  <th>Specific_Location</th>
-	  <th>Running</th>
-	  <th>Chasing</th>
-	  <th>Climbing</th>
-	  <th>Eating</th>
-	  <th>Foraging</th>
-	  <th>Other_Activities</th>
-	  <th>Kuks</th>
-	  <th>Quaas</th>
-	  <th>Moans</th>
-	  <th>Tail_Flags</th>
-	  <th>Tail_Twitches</th>
-	  <th>Approaches</th>
-	  <th>Indifferent</th>
-	  <th>Runs_From</th>
+	  <th>Link to Unique Squirrel Sighting</th>
         </tr>
       </thead>
       <tbody>
 	{% for squirrel in squirrels %}
         <tr>
-	  <td>{{squirrel.Latitude}}</td>
-          <td>{{squirrel.Longitude}}</td>
-	  <td><a href='{{squirrel.Unique_Squirrel_ID}}'>{{squirrel.Unique_Squirrel_ID}}</a></td>
-	  <td>{{squirrel.Shift}}</td>
+	  <td>{{squirrel.Unique_Squirrel_ID}}</td>
 	  <td>{{squirrel.Date}}</td>
-	  <td>{{squirrel.Age}}</td>
-	  <td>{{squirrel.Primary_Fur_Color}}</td>
-          <td>{{squirrel.Location}}</td>
-	  <td>{{squirrel.Specific_Location}}</td>
-	  <td>{{squirrel.Running}}</td>
-	  <td>{{squirrel.Chasing}}</td>
-	  <td>{{squirrel.Climbing}}</td>
-	  <td>{{squirrel.Eating}}</td>
-	  <td>{{squirrel.Foraging}}</td>
-	  <td>{{squirrel.Other_Activities}}</td>
-	  <td>{{squirrel.Kuks}}</td>
-	  <td>{{squirrel.Quaas}}</td>
-	  <td>{{squirrel.Moans}}</td>
-	  <td>{{squirrel.Tail_Flags}}</td>
-	  <td>{{squirrel.Tail_Twitches}}</td>
-	  <td>{{squirrel.Approaches}}</td>
-	  <td>{{squirrel.Indifferent}}</td>
-	  <td>{{squirrel.Runs_From}}</td>
+	  <td><a href="/sightings/{{squirrel.Unique_Squirrel_ID}}/detail">Details</a></td>
 	  <td><a href='/sightings/{{squirrel.Unique_Squirrel_ID}}/'>edit</a></td>
-          <td><a href='/sightings/{{squirrel.Unique_Squirrel_ID}}/delete/'>delete</a></td>
         </tr>
 	{% endfor %}
       </tbody>
