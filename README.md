@@ -5,7 +5,7 @@ This is a django based project that keep track of all the known squirrels at Cen
 ## Group Name and Members
 - Group Name: return get_A 
 - Section: IEORE4501_001_2020_3 
-- UNIs: [tz2467,  
+- UNIs: [tz2467, xz2986]
 - Names: [Tianrui Zhao, Xiaoyun Zhang] 
 
 ## The map view:
