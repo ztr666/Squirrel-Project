@@ -9,16 +9,16 @@ This is a django based project that keep track of all the known squirrels at Cen
 - Names: [Tianrui Zhao, Xiaoyun Zhang] 
 
 ## The map view:
-[Map View](https://cute-squirrel.df.r.appspot.com/map)
+Located at: /map
 
 ## Sightings:
-[Sightings](https://cute-squirrel.df.r.appspot.com/sightings)
+Located at: /sightings
 
 ## Edit:
-[Edit](https://cute-squirrel.df.r.appspot.com/sightings/37F-PM-1014-03/)
+Located at: /sightings/<unique-squirrel-id>
 
 ## Add new squirrels:
-[Add](https://cute-squirrel.df.r.appspot.com/sightings/add/)
+Located at: /sightings/add
 
 ## Stats:
-[Stats](https://cute-squirrel.df.r.appspot.com/sightings/stats/)
+Located at: /sightings/stats
