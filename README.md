@@ -15,7 +15,7 @@ Located at: /map
 Located at: /sightings
 
 ## Edit:
-Located at: /sightings/<unique-squirrel-id>
+Located at: /sightings/'unique-squirrel-id'
 
 ## Add new squirrels:
 Located at: /sightings/add
